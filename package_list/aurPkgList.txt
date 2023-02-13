@@ -1,37 +1,34 @@
-beekeeper-studio-bin 3.6.2-1
-bluetooth-autoconnect 1.3-1
-bluez-firmware 1.2-9
-brave-nightly-bin 1.49.27-1
-ceph-libs 15.2.17-1
-desktop-dimmer 4.0.4-2
-dmsdos-git 61.c9044d5-1
-electron18 18.3.15-4
-fnm-bin 1.31.1-3
-freetube-bin 0.17.1-1
-gconf 3.2.6+11+g07808097-10
-gitflow-avh 1.12.3-1
-gitflow-fishcompletion-avh 0.6.0-1
-gn-m87 0.1831.e002e68a-1
-google-chrome 105.0.5195.125-1
-gummy 0.3-1
-i3-gaps 4.21.1-1
-insomnia-bin 2022.6.0-1
-kimai-git 1.1.0.r206.gab8c2a92-1
-libvterm01 0.1.4-2
-linux518 5.18.19-3
-manjaro-documentation-en 20181009-1
-manjaro-firmware 20160419-1
-nautilus-gnome-disks 0.1.1-2
-neovim-nightly-bin 0.9.0+dev+825+g843c9025a-1
-noto-fonts-compat 20151217-1
-olivia r856.cd12cb3-1
-picom-jonaburg-fix 0.1-2
-playonlinux 4.4+29+gd0ae9ce6-1
-pulseeffects-legacy 4.8.7-1
-python-pep517 0.13.0-1
-python2 2.7.18-8
-qt5-webkit 5.212.0alpha4-18
-sdbus-cpp 1.2.0-2
-stacer-bin 1.1.0-3
-tor-browser 12.0.2-1
-vscodium-bin 1.71.2.22258-1
+beekeeper-studio-bin
+bluetooth-autoconnect
+bluez-firmware
+brave-nightly-bin
+ceph-libs
+desktop-dimmer
+dmsdos-git
+electron18
+fnm-bin
+freetube-bin
+gconf
+gitflow-avh
+gitflow-fishcompletion-avh
+gn-m87
+google-chrome
+gummy
+insomnia-bin
+kimai-git
+libvterm01
+linux518
+manjaro-documentation-en
+manjaro-firmware
+nautilus-gnome-disks
+neovim-nightly-bin
+noto-fonts-compat
+picom-jonaburg-fix
+pulseeffects-legacy
+python-pep517
+python2
+qt5-webkit
+sdbus-cpp
+stacer-bin
+tor-browser
+vscodium-bin
