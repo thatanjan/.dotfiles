@@ -20,7 +20,7 @@ exec_always --no-startup-id pulseaudio-equalizer enable
 
 exec_always --no-startup-id echo "" >> ~/.config/picom/picom.conf
 
-exec_always --no-startup-id $HOME/.config/polybar/material/launch.sh
+exec_always --no-startup-id $HOME/.config/polybar/shapes/launch.sh
 exec_always amixer
 exec_always --no-startup-id start-pulseaudio-x11
 
@@ -136,22 +136,22 @@ mode "resize" {
 bindsym $super+r mode "resize"
 
 # panel
- bar {
-    position bottom
-         colors {
-         background #0a0a0a
-         statusline #2f343f
-         separator #4b5262
-
-         # colour of border, background, and text
-         focused_workspace       #2f343f #bf616a #d8dee8
-         active_workspace        #2f343f #2f343f #d8dee8
-         inactive_workspace      #2f343f #2f343f #d8dee8
-         urgent_workspacei       #2f343f #ebcb8b #2f343f
-     }
-        status_command i3status
-       # status_command polybar example
- }
+ # bar {
+ #    position bottom
+ #         colors {
+ #         background #0a0a0a
+ #         statusline #2f343f
+ #         separator #4b5262
+ #
+ #         # colour of border, background, and text
+ #         focused_workspace       #2f343f #bf616a #d8dee8
+ #         active_workspace        #2f343f #2f343f #d8dee8
+ #         inactive_workspace      #2f343f #2f343f #d8dee8
+ #         urgent_workspacei       #2f343f #ebcb8b #2f343f
+ #     }
+ #        status_command i3status
+ #       # status_command polybar example
+ # }
 
 # window rules, you can find the window class using xprop
 for_window [class=".*"] border pixel 2
