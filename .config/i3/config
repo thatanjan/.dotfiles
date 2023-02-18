@@ -20,6 +20,7 @@ exec_always --no-startup-id pulseaudio-equalizer enable
 
 exec_always --no-startup-id echo "" >> ~/.config/picom/picom.conf
 
+exec_always --no-startup-id $HOME/.dotfiles/polybar-themes/setup.sh
 exec_always --no-startup-id $HOME/.config/polybar/shapes/launch.sh
 exec_always amixer
 exec_always --no-startup-id start-pulseaudio-x11
