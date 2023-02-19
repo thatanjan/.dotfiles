@@ -2,5 +2,5 @@ kitty/.config/kitty/theme.conf
 polybar/
 github-copilot/
 ranger/.config/ranger/plugins/
-__pycache__/
 fish/.config/fish/fish_variables
+__pycache__/
