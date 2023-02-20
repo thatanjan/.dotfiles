@@ -7,6 +7,10 @@ from libqtile.utils import guess_terminal
 
 mod = "mod4"
 terminal = 'kitty'
+ctrl = "control"
+shift = "shift"
+alt = 'alt'
+
 
 keys = [
     # A list of available commands that can be bound to keys can be found
@@ -57,7 +61,17 @@ keys = [
     Key([mod, "shift"], "r", lazy.restart(), desc="Restart Qtile"),
     Key([mod, "control"], "q", lazy.shutdown(), desc="Shutdown Qtile"),
     Key([mod], "r", lazy.spawncmd(), desc="Spawn a command using a prompt widget"),
-    Key([mod], 'd', lazy.spawn('rofi -show drun'))
+    Key([mod], 'd', lazy.spawn('rofi -show drun')),
+    Key([mod, shift], "b", lazy.spawn(
+        'brave-browser-nightly'), desc="Open brave browser"),
+
+    Key([], 'XF86AudioRaiseVolume', lazy.spawn('amixer -q set Master 5%+')),
+    Key([], 'XF86AudioLowerVolume', lazy.spawn('amixer -q set Master 5%-')),
+    Key([], 'XF86AudioMute', lazy.spawn('amixer -q set Master toggle')),
+
+    Key([], 'F7', lazy.spawn('amixer -q set Master 5%+')),
+    Key([], 'F6', lazy.spawn('amixer -q set Master 5%-')),
+    Key([], 'F8', lazy.spawn('amixer -q set Master toggle')),
 ]
 
 groups = [Group(i) for i in "1234567890"]
