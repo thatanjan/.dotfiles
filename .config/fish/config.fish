@@ -5,8 +5,8 @@ alias ali='nvim ~/.config/fish/config.fish'
 alias rali='nvim ~/.config/fish/config.fish'
 alias kitcon='nvim ~/.config/kitty/kitty.conf'
 
-alias nvimPer='cd ~/linux-config/nvim/.config/nvim/ && git checkout personal'
-alias nvimDro='cd ~/linux-config/nvim/.config/nvim/ && git checkout droppe'
+alias nvimPer='cd ~/.dotfiles/.config/nvim/ && git checkout personal'
+alias nvimDro='cd ~/.dotfiles/.config/nvim/ && git checkout droppe'
 
 alias cdpor='cd ~/git_projects/portfolio'
 alias pors='cd ~/git_projects/portfolio && yarn dev'
@@ -52,10 +52,10 @@ alias v='nvim'
 alias nvcon='nvim ~/.config/nvim/init.lua'
 alias picoc='nvim ~/.config/picom/picom.conf'
 alias alac='nvim ~/.config/alacritty/alacritty.yml'
-alias liconv='v ~/linux-config'
-alias cdlico='cd ~/linux-config'
+alias liconv='v ~/.dotfiles'
+alias cdlico='cd ~/.dotfiles'
 alias qcon='nvim ~/.config/qtile/config.py'
-alias newv='cd  ~/linux-config/nvim/.config/nvim/ && nvim .'
+alias newv='cd  ~/.dotfiles/.config/nvim/ && nvim .'
 
 
 # System
@@ -122,7 +122,7 @@ set SUDO_EDITOR 'nvim'
 
 
 # for oh my posh
-oh-my-posh init fish --config ~/.poshthemes/marcduiker.omp.json | source
+oh-my-posh init fish --config ~/.poshthemes/tonybaloney.omp.json | source
 
 set -g fish_key_bindings fish_vi_key_bindings
 
