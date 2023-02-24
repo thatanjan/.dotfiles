@@ -74,7 +74,6 @@ c-ares
 ca-certificates
 ca-certificates-mozilla
 ca-certificates-utils
-cabextract
 cairo
 cairomm
 cantarell-fonts
@@ -130,6 +129,7 @@ diffutils
 ding-libs
 discount
 djvulibre
+dmenu
 dmidecode
 dmraid
 dnsmasq
@@ -167,6 +167,7 @@ faad2
 fakeroot
 faudio
 fcgi
+fd
 feh
 ffmpeg
 ffmpeg4.4
@@ -235,13 +236,13 @@ glibmm
 glslang
 glu
 gmp
+gn
 gnome-autoar
 gnome-desktop-4
 gnome-desktop-common
 gnome-disk-utility
 gnome-font-viewer
 gnome-themes-extra
-gnu-netcat
 gnupg
 gnustep-base
 gnutls
@@ -302,8 +303,8 @@ hwdata
 hwinfo
 hwloc
 hyphen
+i3-wm
 iana-etc
-icoutils
 icu
 ijs
 imagemagick
@@ -327,7 +328,6 @@ jbig2dec
 jdk-openjdk
 jemalloc
 jfsutils
-jq
 jre-openjdk
 jre-openjdk-headless
 jre11-openjdk-headless
@@ -430,6 +430,7 @@ ksystemlog
 ksystemstats
 ktexteditor
 ktextwidgets
+ktimer
 kunitconversion
 kuserfeedback
 kvantum
@@ -454,7 +455,6 @@ ldb
 ldns
 less
 leveldb
-lib32-acl
 lib32-alsa-lib
 lib32-attr
 lib32-brotli
@@ -465,16 +465,11 @@ lib32-e2fsprogs
 lib32-expat
 lib32-faudio
 lib32-flac
-lib32-fontconfig
 lib32-freeglut
-lib32-freetype2
 lib32-gcc-libs
-lib32-gettext
 lib32-glew
-lib32-glib2
 lib32-glibc
 lib32-glu
-lib32-harfbuzz
 lib32-icu
 lib32-keyutils
 lib32-krb5
@@ -493,11 +488,8 @@ lib32-libidn2
 lib32-libjpeg-turbo
 lib32-libldap
 lib32-libltdl
-lib32-libnl
 lib32-libogg
-lib32-libpcap
 lib32-libpciaccess
-lib32-libpng
 lib32-libpsl
 lib32-libpulse
 lib32-libsm
@@ -540,7 +532,6 @@ lib32-ncurses
 lib32-openssl
 lib32-opus
 lib32-pam
-lib32-pcre2
 lib32-readline
 lib32-sdl2
 lib32-systemd
@@ -850,7 +841,6 @@ lsb-release
 lua
 lua52
 luajit
-luit
 lv2
 lvm2
 lxappearance
@@ -1079,6 +1069,8 @@ portsmf
 postgresql
 postgresql-libs
 powerdevil
+powerline-common
+powerline-fonts
 powertop
 ppp
 pptpclient
@@ -1135,6 +1127,7 @@ python-docopt
 python-docutils
 python-elasticsearch
 python-exceptiongroup
+python-fastjsonschema
 python-filelock
 python-flask
 python-flask-restful
@@ -1179,7 +1172,6 @@ python-mdurl
 python-mock
 python-more-itertools
 python-msgpack
-python-natsort
 python-nautilus
 python-nose
 python-npyscreen
@@ -1270,7 +1262,6 @@ python-webtest
 python-werkzeug
 python-wheel
 python-wrapt
-python-wxpython
 python-xcffib
 python-xmlsec
 python-yaml
@@ -1418,6 +1409,7 @@ sbc
 sddm
 sddm-breath-theme
 sddm-kcm
+sdl12-compat
 sdl2
 seatd
 sed
@@ -1546,10 +1538,10 @@ wayland-protocols
 wayland-utils
 web-installer-url-handler
 webrtc-audio-processing
+wezterm
 wget
 which
 wildmidi
-wine
 wireless-regdb
 wireless_tools
 wlroots0.15
@@ -1563,7 +1555,6 @@ x264
 x265
 xapian-core
 xapp
-xbitmaps
 xcb-proto
 xcb-util
 xcb-util-cursor
@@ -1615,7 +1606,6 @@ xorg-xrdb
 xorg-xset
 xorg-xsetroot
 xorgproto
-xterm
 xvidcore
 xxhash
 xz
