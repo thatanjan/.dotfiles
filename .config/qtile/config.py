@@ -3,7 +3,6 @@ import subprocess
 from libqtile import bar, layout, widget, hook
 from libqtile.config import Click, Drag, Match, Screen
 from libqtile.lazy import lazy
-from libqtile.utils import guess_terminal
 
 from keymaps import keys
 from groups import groups
@@ -19,7 +18,10 @@ keys = keys
 groups = groups
 
 layouts = [
-    layout.Columns(border_focus_stack=["#d75f5f", "#8f3d3d"], border_width=4),
+    layout.Columns(
+        border_focus='#fff',
+        margin=10
+    ),
     layout.Max(),
     # Try more layouts by unleashing below layouts.
     # layout.Stack(num_stacks=2),
