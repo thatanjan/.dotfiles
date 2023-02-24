@@ -59,6 +59,10 @@ screens = [
                 # widget.StatusNotifier(),
                 widget.Systray(),
                 widget.Volume(step=5),
+                widget.Net(
+                    interface='enp42s0',
+                    format='{down} ↓↑ {up}',
+                ),
                 widget.Clock(format="%Y-%m-%d %a %I:%M %p"),
                 widget.QuickExit(),
             ],
