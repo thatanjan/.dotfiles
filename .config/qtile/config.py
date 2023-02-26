@@ -3,6 +3,7 @@ import subprocess
 from libqtile import bar, layout, widget, hook
 from libqtile.config import Click, Drag, Match, Screen
 from libqtile.lazy import lazy
+from libqtile.widget import Battery
 
 from keymaps import keys
 from groups import groups
@@ -43,6 +44,14 @@ widget_defaults = dict(
 )
 extension_defaults = widget_defaults.copy()
 
+
+battery_widget = Battery(
+    battery_name="BAT0",
+    discharge_char='↓',
+    charge_char='↑',
+    format='{char} {percent:2.0%}',
+)
+
 screens = [
     Screen(
         bottom=bar.Bar(
@@ -60,6 +69,7 @@ screens = [
                 # NB Systray is incompatible with Wayland, consider using StatusNotifier instead
                 # widget.StatusNotifier(),
                 widget.Systray(),
+                battery_widget,
                 widget.Volume(step=5),
                 widget.Net(
                     interface='enp42s0',
