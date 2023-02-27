@@ -61,6 +61,7 @@ keys = [
     Key([mod, shift], "b", lazy.spawn(
         'brave-browser-nightly'), desc="Open brave browser"),
 
+    # For volume
     Key([], 'XF86AudioRaiseVolume', lazy.spawn('amixer -q set Master 5%+')),
     Key([], 'XF86AudioLowerVolume', lazy.spawn('amixer -q set Master 5%-')),
     Key([], 'XF86AudioMute', lazy.spawn('amixer -q set Master toggle')),
@@ -68,4 +69,8 @@ keys = [
     Key([], 'F7', lazy.spawn('amixer -q set Master 5%+')),
     Key([], 'F6', lazy.spawn('amixer -q set Master 5%-')),
     Key([], 'F8', lazy.spawn('amixer -q set Master toggle')),
+
+    # For Brightness
+    Key([], "XF86MonBrightnessUp", lazy.spawn("brightnessctl set +10%")),
+    Key([], "XF86MonBrightnessDown", lazy.spawn("brightnessctl set 10%-")),
 ]
