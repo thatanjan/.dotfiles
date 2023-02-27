@@ -10,7 +10,7 @@ def is_laptop():
 
 backlight_widget = Backlight(
     backlight_name='amdgpu_bl0',  # Replace with your backlight name
-    step=10,
+    step=5,
     update_interval=0.2,
 )
 
