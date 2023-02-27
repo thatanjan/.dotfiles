@@ -1,11 +1,18 @@
 import os
-from libqtile.widget import Battery, CPU
+from libqtile.widget import Battery, CPU, Backlight
 from libqtile import widget
 
 
 def is_laptop():
     battery_path = '/sys/class/power_supply/BAT0'
     return os.path.exists(battery_path)
+
+
+backlight_widget = Backlight(
+    backlight_name='amdgpu_bl0',  # Replace with your backlight name
+    step=10,
+    update_interval=0.2,
+)
 
 
 battery_widget = Battery(
@@ -50,5 +57,6 @@ def widgets_init():
 
     if is_laptop():
         widget_list.insert(-4, battery_widget)
+        widget_list.insert(-3, backlight_widget)
 
     return widget_list
