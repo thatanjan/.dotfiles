@@ -71,6 +71,6 @@ keys = [
     Key([], 'F8', lazy.spawn('amixer -q set Master toggle')),
 
     # For Brightness
-    Key([], "XF86MonBrightnessUp", lazy.spawn("brightnessctl set +10%")),
-    Key([], "XF86MonBrightnessDown", lazy.spawn("brightnessctl set 10%-")),
+    Key([], "XF86MonBrightnessUp", lazy.spawn("brightnessctl set +5%")),
+    Key([], "XF86MonBrightnessDown", lazy.spawn("brightnessctl set 5%-")),
 ]
