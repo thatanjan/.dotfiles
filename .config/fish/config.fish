@@ -115,34 +115,8 @@ set PATH /home/anjan/.config/composer/vendor/bin $PATH
 set -x QT_STYLE_OVERIDE GTK+
 set -x QT_QPA_PLATFORMTHEME qt5ct
 
-# set -U $budspencer_pwdstyle long
+set -U $budspencer_pwdstyle long
 
 set SUDO_EDITOR 'nvim'
 
-
-
-# for oh my posh
-oh-my-posh init fish --config ~/.poshthemes/tonybaloney.omp.json | source
-
 set -g fish_key_bindings fish_vi_key_bindings
-
-function fish_mode_prompt
-  switch $fish_bind_mode
-    case default
-      set_color --bold red
-      echo ''
-    case insert
-      set_color --bold green
-      echo ''
-    case replace_one
-      set_color --bold green
-      echo ''
-    case visual
-      set_color --bold brmagenta
-      echo ''
-    case '*'
-      set_color --bold red
-      echo '?'
-  end
-  set_color normal
-end
