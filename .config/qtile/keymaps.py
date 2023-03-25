@@ -73,4 +73,14 @@ keys = [
     # For Brightness
     Key([], "XF86MonBrightnessUp", lazy.spawn("brightnessctl set +5%")),
     Key([], "XF86MonBrightnessDown", lazy.spawn("brightnessctl set 5%-")),
+
+    # Switch focus to specific monitor (out of second)
+    Key([mod], "w",
+        lazy.to_screen(0),
+        desc='Keyboard focus to monitor 1'
+        ),
+    Key([mod], "e",
+        lazy.to_screen(1),
+        desc='Keyboard focus to monitor 2'
+        ),
 ]
