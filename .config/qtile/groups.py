@@ -2,12 +2,8 @@ from libqtile.config import Group, Key
 from libqtile.lazy import lazy
 
 from keymaps import keys
+from constants import mod1, mod4
 
-mod = "mod4"
-terminal = 'kitty'
-ctrl = "control"
-shift = "shift"
-alt = 'alt'
 
 # Define the list of group names
 groups = [Group(str(i)) for i in range(1, 11)]
@@ -17,15 +13,24 @@ for i, group in enumerate(groups):
 
     keys.extend(
         [
-            # mod1 + letter of group = switch to group
+            # mod1 or mod4 + letter of group = switch to group
             Key(
-                [mod],
+                [mod1],
                 group_key,
                 lazy.group[group.name].toscreen(),
                 desc="Switch to group {}".format(group.name),
             ),
-            # mod1 + shift + letter of group = move focused window to group
-            Key([mod, "shift"], group_key, lazy.window.togroup(group.name),
+            Key(
+                [mod4],
+                group_key,
+                lazy.group[group.name].toscreen(),
+                desc="Switch to group {}".format(group.name),
+            ),
+
+            # mod1 or mod4 + shift + letter of group = move focused window to group
+            Key([mod1, "shift"], group_key, lazy.window.togroup(group.name),
+                desc="move focused window to group {}".format(group.name)),
+            Key([mod4, "shift"], group_key, lazy.window.togroup(group.name),
                 desc="move focused window to group {}".format(group.name)),
         ]
     )
