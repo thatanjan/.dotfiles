@@ -61,6 +61,7 @@ def init_keymaps_with_mod(mod):
         Key([mod], "r", lazy.spawncmd(),
             desc="Spawn a command using a prompt widget"),
         Key([mod], 'd', lazy.spawn('rofi -show drun')),
+        Key([mod, shift], 'd', lazy.spawn('rofi -show window')),
         Key([mod, shift], "b", lazy.spawn(
             'brave-browser-nightly'), desc="Open brave browser"),
 
