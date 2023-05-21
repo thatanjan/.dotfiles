@@ -1,6 +1,3 @@
 [submodule "nvim"]
 	path = .config/nvim
 	url = git@github.com:thatanjan/neovim-config.git
-[submodule "polybar-themes"]
-	path = polybar-themes
-	url = git@github.com:thatanjan/polybar-themes.git
