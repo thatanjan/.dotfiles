@@ -1,3 +1,7 @@
+# Important
+alias cat=bat
+
+
 alias red='redshift -l 23.810331:90.412521 -b'
 alias i3='nvim ~/.config/i3/config'
 alias ri3='bat ~/.config/i3/config'
