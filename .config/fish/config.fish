@@ -111,6 +111,7 @@ set PATH /home/anjan/.emacs.d/bin $PATH
 set PATH /var/lib/snapd/snap/bin $PATH
 set PATH /home/anjan/.cargo/bin $PATH
 set PATH /home/anjan/.config/composer/vendor/bin $PATH
+set PATH /home/anjan/.dotfiles/my_scripts/ $PATH
 # set PATH /.emacs.d/bin $PATH
 # set PATH /home/anjan/.emacs.d/bin $PATH
 
