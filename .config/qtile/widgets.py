@@ -9,10 +9,7 @@ from qtile_extras.widget.decorations import PowerLineDecoration
 from qtile_extras import widget
 
 from colors import theme
-# from battery_widget import Battery
 
-from battery_widget import CustomBattery
-from my_widget import MyWidget
 
 decoration_defaults = dict(
     # colour = colors["white"],
