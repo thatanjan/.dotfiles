@@ -31,7 +31,7 @@ alias ccs='cd ~/git_projects/cules-coding && yarn dev'
 # For git
 alias ga='git add'
 alias gs='git status'
-alias gd='git diff'
+alias gd='batdiff'
 alias gcl='git clone'
 alias gba='git branch -a'
 alias gc='git checkout'
