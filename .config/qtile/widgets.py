@@ -1,8 +1,4 @@
 import os
-# from libqtile.widget import Battery, CPU, Backlight
-# from libqtile import widget
-# from libqtile.lazy import lazy
-# from qtile_extras.widget import decorations
 
 # for decorations
 from qtile_extras.widget.decorations import PowerLineDecoration
@@ -12,7 +8,6 @@ from colors import theme
 
 
 decoration_defaults = dict(
-    # colour = colors["white"],
     radius=10,
     filled=True,
     group=True,
@@ -42,13 +37,6 @@ def widgets_init():
         **powerline
     )
 
-    distro_icon = widget.TextBox(
-        text='  ',
-        foreground='34BE5B',
-        padding=20,
-        fontsize=30
-    )
-
     battery_widget = widget.Battery(
         battery_name="BAT0",
         discharge_char='',
@@ -60,7 +48,7 @@ def widgets_init():
     )
 
     distro_icon = widget.TextBox(
-        text=' ',
+        text='',
         foreground='34BE5B',
         padding=20,
         fontsize=20

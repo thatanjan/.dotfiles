@@ -4,9 +4,11 @@ from libqtile import bar, layout, hook
 from libqtile.config import Click, Drag, Match, Screen
 from libqtile.lazy import lazy
 
+
 from keymaps import keys
 from groups import groups
 from widgets import widgets_init
+from colors import theme
 
 mod = "mod4"
 terminal = 'kitty'
@@ -40,30 +42,31 @@ layouts = [
 
 widget_defaults = dict(
     font="sans",
-    fontsize=12,
-    padding=3,
+    fontsize=15,
+    padding=10,
 )
-extension_defaults = widget_defaults.copy()
 
+extension_defaults = widget_defaults.copy()
 
 screens = [
     Screen(
         bottom=bar.Bar(
-            widgets_init(),
-            24,
-            # border_width=[2, 0, 2, 0],  # Draw top and bottom borders
-            # border_color=["ff00ff", "000000", "ff00ff", "000000"]  # Borders are magenta
+            widgets=widgets_init(),
+            size=33,
+            background=theme['bg'],
+            margin=[10, 15, 10, 15],
         ),
     ),
     Screen(
         bottom=bar.Bar(
-            widgets_init(),
-            24,
-            # border_width=[2, 0, 2, 0],  # Draw top and bottom borders
-            # border_color=["ff00ff", "000000", "ff00ff", "000000"]  # Borders are magenta
+            widgets=widgets_init(),
+            size=33,
+            background=theme['bg'],
+            margin=[10, 15, 10, 15],
         ),
     ),
 ]
+
 
 # Drag floating layouts.
 mouse = [
