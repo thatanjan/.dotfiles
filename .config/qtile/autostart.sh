@@ -1,6 +1,6 @@
 #!/usr/bin/bash
 
-feh --bg-fill "https://www.worldanvil.com/uploads/images/64c41fff4d8ccbd1f2eaaa3e7bc01e82.jpg" &
+source ~/.dotfiles/my_scripts/wallpaper.sh &
 
 pulseaudio-equalizer enable &
 
