@@ -123,5 +123,8 @@ set -x QT_QPA_PLATFORMTHEME qt5ct
 set -U $budspencer_pwdstyle long
 
 set SUDO_EDITOR 'nvim'
+set GIT_EDITOR 'nvim'
+set EDITOR 'nvim'
+
 
 set -g fish_key_bindings fish_vi_key_bindings
