@@ -1,19 +1,16 @@
 #!/bin/bash
 
-DIR=$HOME/.config/hypr/bg
-PICS=($(ls ${DIR}))
+set_wallpaper() {
+	echo 'changing'
+	swaybg -m fill -i ~/Pictures/wallpaper >/dev/null 2>&1 &
+}
 
-RANDOMPICS=${PICS[$RANDOM % ${#PICS[@]}]}
-
-if [[ $(pidof swaybg) ]]; then
-	pkill swaybg
-fi
-
-#!/usr/bin/bash
+set_wallpaper
 
 # Check if URL argument is provided
 if [ -z "$1" ]; then
 	echo "Error: Please provide a URL as an argument."
+	echo "Using the current wallpaper"
 	exit 1
 fi
 
@@ -21,14 +18,16 @@ fi
 mkdir -p ~/Pictures
 
 # Download the image
-curl -o ~/Pictures/wallpaper.jpg "$1"
+curl -o ~/Pictures/wallpaper "$1"
 
 # Check if the download was successful
 if [ $? -eq 0 ]; then
 	echo "Image downloaded successfully and stored as ~/pictures/wallpaper.jpg"
 
 	# swaybg -m fill -i ${DIR}/${RANDOMPICS}
-	swaybg -m fill -i ~/Pictures/wallpaper.jpg
+	# swaybg -m fill -i ~/Pictures/wallpaper >/dev/null 2>&1 &
+	set_wallpaper
+	echo "Wallpaper is changed"
 	# notify-send "${RANDOMPICS}"
 else
 	echo "Error: Failed to download the image."
