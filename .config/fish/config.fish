@@ -104,7 +104,7 @@ alias yrw='yarn redwood'
 alias yrwg='yarn redwood generate'
 
 
-
+set PATH /home/anjan/.dotfiles/.config/hypr/scripts $PATH
 set PATH /home/anjan/.local/bin $PATH
 set PATH /home/anjan/.yarn/bin $PATH
 set PATH /home/anjan/.emacs.d/bin $PATH

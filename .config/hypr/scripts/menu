@@ -1,0 +1,14 @@
+#!/bin/bash
+
+case $1 in
+"--win")
+	rofi -show window
+	;;
+"--emoji")
+	rofi -show emoji
+	;;
+*)
+	rofi -show drun
+	;;
+
+esac
