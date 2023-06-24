@@ -1,0 +1,7 @@
+#!/bin/bash
+
+input=$(rofi -dmenu)
+
+echo $input
+
+changeWallpaper $input
