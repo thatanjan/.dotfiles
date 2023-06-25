@@ -1,0 +1,5 @@
+brave-nightly-bin
+fnm
+ironbar-git
+libsidplay
+vscode-codicons-git
