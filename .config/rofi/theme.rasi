@@ -4,12 +4,20 @@
  * Theme Repo           : https://github.com/lr-tech/rofi-themes-collection
  *******************************************************************************/
 
+ // bg0 winodw
+ // bg1 border top
+ // bg2 selected background-color
 * {
     font:   "Montserrat 12";
 
-    bg0:    #242424E6;
-    bg1:    #7E7E7E80;
-    bg2:    #0860f2E6;
+ background: #010B14;
+  foreground: #cbdee8;
+  active: #0F90B0;
+
+
+    bg0:    @background;
+    bg1:    @foreground;
+    bg2:    @active;
 
     fg0:    #DEDEDE;
     fg1:    #FFFFFF;
@@ -72,6 +80,7 @@ listview {
     fixed-height:   false;
     border:         1px 0 0;
     border-color:   @bg1;
+    padding: 10px 0 0 0;
 }
 
 element {

@@ -11,6 +11,7 @@ set_wallpaper
 if [ -z "$1" ]; then
 	echo "Error: Please provide a URL as an argument."
 	echo "Using the current wallpaper"
+	wal -c && wal -i ~/Pictures/wallpaper
 	exit 1
 fi
 
@@ -28,6 +29,7 @@ if [ $? -eq 0 ]; then
 	# swaybg -m fill -i ~/Pictures/wallpaper >/dev/null 2>&1 &
 	set_wallpaper
 	echo "Wallpaper is changed"
+	wal -c && wal -i ~/Pictures/wallpaper
 	# notify-send "${RANDOMPICS}"
 else
 	echo "Error: Failed to download the image."
