@@ -1,7 +1,6 @@
-[{
+{
   "include": "~/.config/hypr/waybar/modules",
   "layer": "bottom",
-  //"mode": "dock",
   "exclusive": true,
   "passthrough": false,
   "position": "top",
@@ -10,27 +9,6 @@
   "ipc": true,
   "margin-left": 0,
   "margin-right": 0,
-
   "modules-left": ["wlr/workspaces", "cpu", "memory", "disk"],
   "modules-right": ["battery", "custom/cycle_wall","custom/updater", "pulseaudio", "custom/keybindings", "clock", "tray", "custom/power"],
-  // "output": ["HDMI-A-1", "eDP-1"]
-  "output": "eDP-1"
 }
-, {
-  "include": "~/.config/hypr/waybar/modules",
-  "layer": "bottom",
-  //"mode": "dock",
-  "exclusive": true,
-  "passthrough": false,
-  "position": "top",
-  "spacing": 5,
-  "fixed-center": true,
-  "ipc": true,
-  "margin-left": 0,
-  "margin-right": 0,
-
-  "modules-left": ["wlr/workspaces", "cpu", "memory", "disk"],
-  "modules-right": ["battery", "custom/cycle_wall","custom/updater", "pulseaudio", "custom/keybindings", "clock", "tray", "custom/power"],
-  // "output": ["HDMI-A-1", "eDP-1"]
-  "output": "HDMI-A-1"
-}]
