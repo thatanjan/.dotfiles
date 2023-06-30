@@ -3,6 +3,16 @@
 CONFIG="$HOME/.config/hypr/waybar/config"
 STYLE="$HOME/.config/hypr/waybar/style.css"
 
-if [[ ! $(pidof waybar) ]]; then
+start_waybar() {
 	waybar --bar main-bar --log-level error --config ${CONFIG} --style ${STYLE}
-fi
+}
+
+CONFIG_FILES="$HOME/.config/hypr/waybar/config $HOME/.config/hypr/waybar/style.css"
+
+trap "killall waybar" EXIT
+
+while true; do
+	start_waybar &
+	inotifywait -e create,modify $CONFIG_FILES
+	killall waybar
+done

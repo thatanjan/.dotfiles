@@ -124,17 +124,11 @@
   },
 
   "custom/updater":{
-    "format": " {}",
+    "format": "󰚰 {}",
     "exec": "checkupdates | wc -l",
     "exec-if": "[[ $(checkupdates | wc -l) ]]",
     "interval": 10800,
     "on-click": "kitty --class update -T update -o font_size=13 -e yay -Syu && notify-send 'The system has been updated' "
-  },
-
-  "custom/cycle_wall":{
-    "format":"",
-    "on-click": "~/.config/hypr/scripts/changeWallpaper",
-    "tooltip-format": "Change wallpaper",
   },
 
   "pulseaudio": {
@@ -163,7 +157,7 @@
   },
 
   "custom/keybindings": {
-  "format":"爵",
+  "format":"",
   "tooltip": false,
   "on-click": "~/.config/hypr/scripts/keyhint",
   },
