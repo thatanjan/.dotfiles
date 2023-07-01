@@ -1,7 +1,6 @@
 # Important
 alias cat=bat
 
-
 alias red='redshift -l 23.810331:90.412521 -b'
 alias i3='nvim ~/.config/i3/config'
 alias ri3='bat ~/.config/i3/config'
@@ -31,7 +30,7 @@ alias ccs='cd ~/git_projects/cules-coding && yarn dev'
 # For git
 alias ga='git add'
 alias gs='git status'
-alias gd='batdiff'
+alias gd='git diff'
 alias gcl='git clone'
 alias gba='git branch -a'
 alias gc='git checkout'
