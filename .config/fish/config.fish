@@ -119,11 +119,41 @@ set PATH /home/anjan/.dotfiles/my_scripts/ $PATH
 set -x QT_STYLE_OVERIDE GTK+
 set -x QT_QPA_PLATFORMTHEME qt5ct
 
-set -U $budspencer_pwdstyle long
+# set -U $budspencer_pwdstyle long
 
 set SUDO_EDITOR 'nvim'
 set GIT_EDITOR 'nvim'
 set EDITOR 'nvim'
 
-
 set -g fish_key_bindings fish_vi_key_bindings
+
+
+function fish_greeting
+    neofetch
+end
+
+function fish_mode_prompt
+  switch $fish_bind_mode
+    case default
+      set_color --bold red
+      echo 'N'
+    case insert
+      set_color --bold green
+      echo 'I'
+    case replace_one
+      set_color --bold green
+      echo 'R'
+    case visual
+      set_color --bold brmagenta
+      echo 'V'
+    case '*'
+      set_color --bold red
+      echo '?'
+  end
+  set_color normal
+end
+
+# Use oh my posh
+# oh-my-posh init fish | source
+# oh-my-posh init fish --config 'https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/easy-term.omp.json' | source
+oh-my-posh init fish --config '~/.mytheme.omp.json' | source
