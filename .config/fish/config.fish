@@ -31,7 +31,7 @@ alias ccs='cd ~/git_projects/cules-coding && yarn dev'
 # For git
 alias ga='git add'
 alias gs='git status'
-alias gd='batdiff'
+alias gd='git diff'
 alias gcl='git clone'
 alias gba='git branch -a'
 alias gc='git checkout'
@@ -120,12 +120,11 @@ set PATH /home/anjan/.dotfiles/my_scripts/ $PATH
 set -x QT_STYLE_OVERIDE GTK+
 set -x QT_QPA_PLATFORMTHEME qt5ct
 
-set -U $budspencer_pwdstyle long
+# set -U $budspencer_pwdstyle long
 
 set SUDO_EDITOR 'nvim'
 set GIT_EDITOR 'nvim'
 set EDITOR 'nvim'
-
 
 set -g fish_key_bindings fish_vi_key_bindings
 
