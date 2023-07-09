@@ -1,6 +1,10 @@
 # Important
 alias cat=bat
 
+alias wcv='cd ~/.dotfiles/.config/hypr/ && nvim waybar/config'
+alias hcv='cd ~/.dotfiles/.config/hypr/ && nvim hyprland.conf'
+alias hc='cd ~/.dotfiles/.config/hypr/'
+
 
 alias red='redshift -l 23.810331:90.412521 -b'
 alias i3='nvim ~/.config/i3/config'
