@@ -5,7 +5,6 @@ alias wcv='cd ~/.dotfiles/.config/hypr/ && nvim waybar/config'
 alias hcv='cd ~/.dotfiles/.config/hypr/ && nvim hyprland.conf'
 alias hc='cd ~/.dotfiles/.config/hypr/'
 
-
 alias red='redshift -l 23.810331:90.412521 -b'
 alias i3='nvim ~/.config/i3/config'
 alias ri3='bat ~/.config/i3/config'
@@ -137,11 +136,13 @@ function fish_greeting
     # neofetch
 end
 
+# Display fish mode prompt
 function fish_mode_prompt
   # switch $fish_bind_mode
   #   case default
   #     set_color --bold red
-  #     echo 'N'
+  #     set_color -b green
+  #     echo 'N  '
   #   case insert
   #     set_color --bold green
   #     echo 'I'
@@ -156,6 +157,7 @@ function fish_mode_prompt
   #     echo '?'
   # end
   # set_color normal
+  # echo ''
 end
 
 # Use oh my posh
