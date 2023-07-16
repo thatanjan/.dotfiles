@@ -81,7 +81,7 @@
   },
 
   "custom/menu": {
-    "format": "",
+    "format": "󰣇",
     "tooltip": false,
     "on-click": "$HOME/.config/hypr/scripts/menu",
   },
@@ -99,17 +99,17 @@
 
   "memory": {
     "interval": 10,
-    "format": " {used:0.1f}G",
+    "format": "  {used:0.1f}G",
   },
 
   "network": {
     "interval": 5,
-    "format-wifi": " {essid}",
+    "format-wifi": " {bandwidthUpBits} |  {bandwidthDownBits}",
     "format-ethernet": " {ipaddr}/{cidr}",
     "format-linked": " {ifname} (No IP)",
     "format-disconnected": "睊 Disconnected",
     "format-disabled": "睊 Disabled",
-    "format-alt": " {bandwidthUpBits} |  {bandwidthDownBits}",
+    "format-alt": "    {essid}",
     "tooltip-format": " {ifname} via {gwaddr}",
   },
 
@@ -124,17 +124,11 @@
   },
 
   "custom/updater":{
-    "format": " {}",
+    "format": "󰚰 {}",
     "exec": "checkupdates | wc -l",
     "exec-if": "[[ $(checkupdates | wc -l) ]]",
     "interval": 10800,
     "on-click": "kitty --class update -T update -o font_size=13 -e yay -Syu && notify-send 'The system has been updated' "
-  },
-
-  "custom/cycle_wall":{
-    "format":"",
-    "on-click": "~/.config/hypr/scripts/changeWallpaper",
-    "tooltip-format": "Change wallpaper",
   },
 
   "pulseaudio": {
@@ -163,7 +157,7 @@
   },
 
   "custom/keybindings": {
-  "format":"爵",
+  "format":"",
   "tooltip": false,
   "on-click": "~/.config/hypr/scripts/keyhint",
   },

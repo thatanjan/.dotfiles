@@ -1,6 +1,9 @@
 # Important
 alias cat=bat
 
+alias wcv='cd ~/.dotfiles/.config/hypr/ && nvim waybar/config'
+alias hcv='cd ~/.dotfiles/.config/hypr/ && nvim hyprland.conf'
+alias hc='cd ~/.dotfiles/.config/hypr/'
 
 alias red='redshift -l 23.810331:90.412521 -b'
 alias i3='nvim ~/.config/i3/config'
@@ -31,7 +34,7 @@ alias ccs='cd ~/git_projects/cules-coding && yarn dev'
 # For git
 alias ga='git add'
 alias gs='git status'
-alias gd='batdiff'
+alias gd='git diff'
 alias gcl='git clone'
 alias gba='git branch -a'
 alias gc='git checkout'
@@ -120,11 +123,44 @@ set PATH /home/anjan/.dotfiles/my_scripts/ $PATH
 set -x QT_STYLE_OVERIDE GTK+
 set -x QT_QPA_PLATFORMTHEME qt5ct
 
-set -U $budspencer_pwdstyle long
+# set -U $budspencer_pwdstyle long
 
 set SUDO_EDITOR 'nvim'
 set GIT_EDITOR 'nvim'
 set EDITOR 'nvim'
 
-
 set -g fish_key_bindings fish_vi_key_bindings
+
+
+function fish_greeting
+    # neofetch
+end
+
+# Display fish mode prompt
+function fish_mode_prompt
+  # switch $fish_bind_mode
+  #   case default
+  #     set_color --bold red
+  #     set_color -b green
+  #     echo 'N  '
+  #   case insert
+  #     set_color --bold green
+  #     echo 'I'
+  #   case replace_one
+  #     set_color --bold green
+  #     echo 'R'
+  #   case visual
+  #     set_color --bold brmagenta
+  #     echo 'V'
+  #   case '*'
+  #     set_color --bold red
+  #     echo '?'
+  # end
+  # set_color normal
+  # echo ''
+end
+
+# Use oh my posh
+# oh-my-posh init fish | source
+# oh-my-posh init fish --config 'https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/easy-term.omp.json' | source
+oh-my-posh init fish --config '~/.mytheme.omp.json' | source

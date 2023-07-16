@@ -1,6 +1,8 @@
 #!/bin/bash
 
-input=$(rofi -dmenu)
+theme_string='entry {placeholder:"Enter wallpaper url...";}'
+
+input=$(rofi -dmenu -theme-str "$theme_string")
 
 echo $input
 
