@@ -98,6 +98,10 @@ window#waybar.hidden {
   background-color: green;
 }
 
+#workspaces button:hover {
+  background-color: @color8;
+}
+
 #workspaces button.active {
   background-color: @color1;
 }
