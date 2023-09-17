@@ -164,3 +164,5 @@ end
 # oh-my-posh init fish | source
 # oh-my-posh init fish --config 'https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/easy-term.omp.json' | source
 oh-my-posh init fish --config '~/.mytheme.omp.json' | source
+zoxide init fish | source
+alias cd='z'
