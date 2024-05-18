@@ -23,7 +23,7 @@ curl -o ~/Pictures/wallpaper "$1"
 
 # Check if the download was successful
 if [ $? -eq 0 ]; then
-	echo "Image downloaded successfully and stored as ~/pictures/wallpaper.jpg"
+	echo "Image downloaded successfully and stored as ~/pictures/wallpaper"
 
 	# swaybg -m fill -i ${DIR}/${RANDOMPICS}
 	# swaybg -m fill -i ~/Pictures/wallpaper >/dev/null 2>&1 &
