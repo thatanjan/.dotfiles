@@ -12,6 +12,10 @@ window#waybar {
   transition-duration: 0.5s;
 }
 
+window#waybar.test #workspaces {
+  background: red;
+}
+
 window#waybar.hidden {
   opacity: 0.5;
 }
@@ -95,7 +99,7 @@ window#waybar.hidden {
 }
 
 #workspaces button.visible {
-  background-color: green;
+  background-color: @color3;
 }
 
 #workspaces button:hover {
@@ -103,6 +107,7 @@ window#waybar.hidden {
 }
 
 #workspaces button.active {
+  /* background-color: @color1; */
   background-color: @color1;
 }
 

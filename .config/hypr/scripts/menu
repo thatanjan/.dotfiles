@@ -7,6 +7,9 @@ case $1 in
 "--emoji")
 	rofi -show emoji
 	;;
+"--clip")
+	rofi -modi "clipboard:greenclip print" -show clipboard -run-command '{cmd}'
+	;;
 *)
 	rofi -show drun
 	;;
