@@ -79,3 +79,10 @@ cd ~/.dotfiles
 stow .
 stow --adopt .  ## To overwrite existing files
 ```
+
+
+### Install Oh-my-fish
+
+```bash
+curl https://raw.githubusercontent.com/oh-my-fish/oh-my-fish/master/bin/install | fish
+```
