@@ -77,7 +77,6 @@ arcolinux-wallpapers-git
 arcolinux-wayland-app-hooks-git
 arcolinux-welcome-app-git
 arcolinux-zsh-git
-arconet-xfce
 argon2
 aribb24
 at-spi2-core
@@ -363,7 +362,6 @@ hwinfo
 hwloc
 hyperv
 hyphen
-hyprlang
 hyprpicker-git
 i2c-tools
 i3lock-color
@@ -495,7 +493,6 @@ less
 lf
 libaccounts-glib
 libaccounts-qt
-libadwaita
 libaio
 libappindicator-gtk3
 libarchive
@@ -879,7 +876,6 @@ ninja
 nm-connection-editor
 node-gyp
 nodejs-nopt
-nomacs
 noto-fonts
 noto-fonts-cjk
 noto-fonts-emoji
