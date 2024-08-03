@@ -1,6 +1,7 @@
 .config/kitty/current-theme.conf
 polybar/
 github-copilot/
-ranger/.config/ranger/plugins/
-fish/.config/fish/fish_variables
+.config/ranger/plugins/
+.config/fish/fish_variables
 __pycache__/
+.config/fish/conf.d/omf.fish
