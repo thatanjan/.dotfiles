@@ -3,32 +3,20 @@
  * User                 : LR-Tech
  * Theme Repo           : https://github.com/lr-tech/rofi-themes-collection
  *******************************************************************************/
-//@import "~/.cache/wal/colors-rofi-dark.rasi"
 
+// NOTE: Color explanation
 // bg0 winodw
 // bg1 border top
 // bg2 selected background-color
 
 * {
+    font: "FiraCode Nerd Font Bold 12";
 
-
- //   active-background: #6F7889;
- //   active-foreground: #d3d5d7;
- //   normal-background: #0b0b0c;
- //   normal-foreground: #d3d5d7;
- //   urgent-background: #5D6E84;
- //   urgent-foreground: #d3d5d7;
-    // ...
-
-
-    font:   "Montserrat 12";
-
-
-    background: #0b0b0c;
+    background: #181926;
     border: #d3d5d7;
-    active-background: #5D6E84;
+    active-background: #5b6078;
 
-    fg0: #d3d5d7;
+    fg0: #cad3f5;
     fg1: #d3d5d7; // Active foreground
     fg2: #d3d5d7;
 
@@ -89,7 +77,7 @@ listview {
     fixed-height:   false;
     border:         1px 0 0;
     border-color:   @border;
-    padding: 10px 0 0 0;
+    padding: 0 0 0 0;
 }
 
 element {

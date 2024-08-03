@@ -8,8 +8,8 @@ configuration {
     kb-remove-to-eol: "Control+Shift+e";
 }
 
-@theme "~/.cache/wal/colors-rofi-dark.rasi"
-// @theme "./theme.rasi"
+// @theme "~/.cache/wal/colors-rofi-dark.rasi"
+@theme "./theme.rasi"
 
 /*  width: 50;*/
 /*  lines: 15;*/
