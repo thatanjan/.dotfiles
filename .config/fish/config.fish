@@ -85,9 +85,7 @@ alias arco='sudo mount /dev/sda13 /mnt/arco'
 alias uarco='sudo umount /mnt/arco'
 alias cdarco='cd /mnt/arco/home/anjan'
 
-
 alias pha='php artisan'
-
 
 ## For Redwood
 alias yrw='yarn redwood'
@@ -103,9 +101,7 @@ set PATH /home/anjan/.cargo/bin $PATH
 set PATH /home/anjan/.config/composer/vendor/bin $PATH
 set PATH /home/anjan/.dotfiles/my_scripts/ $PATH
 
-set -x QT_STYLE_OVERIDE GTK+
 set -x QT_QPA_PLATFORMTHEME qt5ct
-
 
 set SUDO_EDITOR 'nvim'
 set GIT_EDITOR 'nvim'
@@ -113,11 +109,9 @@ set EDITOR 'nvim'
 
 set -g fish_key_bindings fish_vi_key_bindings
 
-
 function fish_greeting
     # neofetch
 end
-
 
 # bun
 set --export BUN_INSTALL "$HOME/.bun"
