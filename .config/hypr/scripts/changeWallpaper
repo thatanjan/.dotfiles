@@ -29,7 +29,7 @@ if [ $? -eq 0 ]; then
 	# swaybg -m fill -i ~/Pictures/wallpaper >/dev/null 2>&1 &
 	set_wallpaper
 	echo "Wallpaper is changed"
-	wal -c && wal -i ~/Pictures/wallpaper
+	# wal -c && wal -i ~/Pictures/wallpaper
 	# notify-send "${RANDOMPICS}"
 else
 	echo "Error: Failed to download the image."
