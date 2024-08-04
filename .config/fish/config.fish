@@ -55,7 +55,7 @@ alias gf='git fetch origin'
 
 # For configs
 alias v='neovide'
-alias nvcon='cd ~/.config/neovide/ && neovide init.lua'
+alias nvcon='cd ~/.config/nvim/ && neovide init.lua'
 alias picoc='neovide ~/.config/picom/picom.conf'
 alias alac='neovide ~/.config/alacritty/alacritty.yml'
 alias liconv='v ~/.dotfiles'
