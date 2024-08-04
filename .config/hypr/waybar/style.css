@@ -1,15 +1,16 @@
-@import url('/home/anjan/.cache/wal/colors-waybar.css');
+/* @import url('/home/anjan/.cache/wal/colors-waybar.css'); */
+@import url('/home/anjan/catppuccin/waybar/themes/macchiato.css');
 
 * {
   font-family: 'JetBrainsMono', 'Noto Sans', 'Roboto Condensed', sans-serif;
   font-size: 14px;
-  color: @foreground;
 }
 
 window#waybar {
-  background: @background;
+  background: @crust;
   transition-property: background-color;
   transition-duration: 0.5s;
+  color: @text;
 }
 
 window#waybar.test #workspaces {
@@ -99,16 +100,18 @@ window#waybar.hidden {
 }
 
 #workspaces button.visible {
-  background-color: @color3;
+  background-color: @red;
+  color: @surface0;
 }
 
 #workspaces button:hover {
-  background-color: @color8;
+  /* background-color: @color8; */
 }
 
 #workspaces button.active {
   /* background-color: @color1; */
-  background-color: @color1;
+  background-color: @mauve;
+  color: @surface0;
 }
 
 #custom-menu {
@@ -138,7 +141,7 @@ window#waybar.hidden {
 }
 
 #custom-cputemp {
-  color: @foreground;
+  color: @text;
 }
 
 #custom-keybindings {
