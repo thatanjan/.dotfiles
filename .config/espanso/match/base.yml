@@ -1,0 +1,61 @@
+# espanso match file
+
+# For a complete introduction, visit the official docs at: https://espanso.org/docs/
+
+# You can use this file to define the base matches (aka snippets)
+# that will be available in every application when using espanso.
+
+# Matches are substitution rules: when you type the "trigger" string
+# it gets replaced by the "replace" string.
+matches:
+  # Simple text replacement
+  - trigger: ':espanso'
+    replace: 'Hi there!'
+
+  # NOTE: espanso uses YAML to define matches, so pay attention to the indentation!
+
+  # But matches can also be dynamic:
+
+  # Print the current date
+  - trigger: ':date'
+    replace: '{{mydate}}'
+    vars:
+      - name: mydate
+        type: date
+        params:
+          format: '%m/%d/%Y'
+
+  # Print 'No impediments'
+  - trigger: ':imped'
+    replace: 'No impediments'
+
+  # Print ':rscmpr'
+  - trigger: ':rscmpr'
+    replace: 'Resolve comments and PR review'
+
+  # Print the output of a shell command
+  - trigger: ':shell'
+    replace: '{{output}}'
+    vars:
+      - name: output
+        type: shell
+        params:
+          cmd: "echo 'Hello from your shell'"
+
+  - trigger: ':lnkdn'
+    replace: 'https://www.linkedin.com/in/thatanjan/'
+
+  - trigger: ':rec_mail'
+    form: "Hello [[person]],\nMy name is Anjan. I am a Full Stack Developer and am interested in learning more about how [[company]] hires developers. I have applied online to the Full Stack Developer positions at [[company]].\nI am not sure if my application has made it to your desk, but I wanted to express my interest directly. I have over a year of remote working experience at a Finnish startup. I have experience developing complex full-stack applications using Typescript, React, NextJS, and Nodejs which makes me an ideal candidate for the position. Some of my projects are Cules Coding, Facesta and more can be found here.\nI also write blogs and make videos on YouTube about programming.\nI am attaching my resume with this email. If I am a fit for this or any other developer roles you’re working on, I’d be happy to set up a call to discuss further.\nThank you very much for your precious time. I am looking forward to hearing back from you.\nSincerely,\nAnjan Shomodder"
+
+  - trigger: ':rec_con_req'
+    form: "Hi [[person]],\nI have applied for the Full Stack Developer role at [[company]]. I'd love to discuss how my skills align with solving company challenges and furthering its mission. Let's connect!\nBest,\nAnjan"
+
+  - trigger: ':peer_con'
+    form: "Hi [[person]],\nI'm a developer and YouTuber. I am interested in the full-stack developer role at [[company]]. I'd love to connect and hear about your experience.\n\nTake care,\nAnjan"
+
+  - trigger: ':culesy'
+    replace: 'https://www.youtube.com/channel/UCBaGowNYTUsm3IDaHbLRMYw'
+
+  - trigger: ':projects'
+    replace: 'https://www.thatanjan.com/projects'
