@@ -12,12 +12,12 @@
 * {
     font: "FiraCode Nerd Font Bold 12";
 
-    background: #181926;
-    border: #d3d5d7;
-    active-background: #5b6078;
+    background: #1e1e2e;
+    border:  #d3d5d7;
+    active-background: #f5c2e7;
 
     fg0: #cad3f5;
-    fg1: #d3d5d7; // Active foreground
+    fg1: #11111b; // Active foreground
     fg2: #d3d5d7;
 
     background-color:   transparent;

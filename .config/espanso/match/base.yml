@@ -57,5 +57,14 @@ matches:
   - trigger: ':culesy'
     replace: 'https://www.youtube.com/channel/UCBaGowNYTUsm3IDaHbLRMYw'
 
-  - trigger: ':projects'
+  - trigger: ':prj'
     replace: 'https://www.thatanjan.com/projects'
+
+  - trigger: ':gh'
+    replace: 'https://github.com/thatanjan/'
+
+  - trigger: ':phn'
+    replace: '+8801608950861'
+
+  - trigger: ':email'
+    replace: 'thatanjan@gmail.com'

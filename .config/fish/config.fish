@@ -1,28 +1,28 @@
 # Important
 alias cat=bat
 
-alias wcv='cd ~/.dotfiles/.config/hypr/ && neovide waybar/config'
-alias hcv='cd ~/.dotfiles/.config/hypr/ && neovide hyprland.conf'
+alias wcv='cd ~/.dotfiles/.config/hypr/ && nvim waybar/config.jsonc'
+alias hcv='cd ~/.dotfiles/.config/hypr/ && nvim hyprland.conf'
 alias hc='cd ~/.dotfiles/.config/hypr/'
 
 alias red='redshift -l 23.810331:90.412521 -b'
-alias i3='neovide ~/.config/i3/config'
+alias i3='nvim ~/.config/i3/config'
 alias ri3='bat ~/.config/i3/config'
-alias ali='neovide ~/.config/fish/config.fish'
-alias rali='neovide ~/.config/fish/config.fish'
-alias kitcon='neovide ~/.config/kitty/kitty.conf'
+alias ali='nvim ~/.config/fish/config.fish'
+alias rali='nvim ~/.config/fish/config.fish'
+alias kitcon='nvim ~/.config/kitty/kitty.conf'
 
-alias neovidePer='cd ~/.dotfiles/.config/neovide/ && git checkout personal'
+alias nvimPer='cd ~/.dotfiles/.config/nvim/ && git checkout personal'
 
 alias cdpor='cd ~/git_projects/portfolio'
 alias pors='cd ~/git_projects/portfolio && yarn dev'
-alias porv='cd ~/git_projects/portfolio && neovide src'
+alias porv='cd ~/git_projects/portfolio && nvim src'
 
 alias cdcfs='cd ~/git_projects/confession/server'
 alias cdcfc='cd ~/git_projects/confession/client'
-alias cf='cd ~/git_projects/confession/server && neovide src'
+alias cf='cd ~/git_projects/confession/server && nvim src'
 alias cfs='cd ~/git_projects/confession/server && yarn dev'
-alias cfc='cd ~/git_projects/confession/client&& neovide .'
+alias cfc='cd ~/git_projects/confession/client&& nvim .'
 alias cfcs='cd ~/git_projects/confession/client&& yarn dev'
 alias cfcbs='cd ~/git_projects/confession/server && yarn both-dev'
 
@@ -54,14 +54,14 @@ alias gm='git merge'
 alias gf='git fetch origin'
 
 # For configs
-alias v='neovide'
-alias nvcon='cd ~/.config/nvim/ && neovide init.lua'
-alias picoc='neovide ~/.config/picom/picom.conf'
-alias alac='neovide ~/.config/alacritty/alacritty.yml'
+alias v='nvim'
+alias nvcon='cd ~/.config/nvim/ && nvim init.lua'
+alias picoc='nvim ~/.config/picom/picom.conf'
+alias alac='nvim ~/.config/alacritty/alacritty.yml'
 alias liconv='v ~/.dotfiles'
 alias cdlico='cd ~/.dotfiles'
-alias qcon='neovide ~/.config/qtile/config.py'
-alias newv='cd  ~/.dotfiles/.config/neovide/ && neovide .'
+alias qcon='nvim ~/.config/qtile/config.py'
+alias newv='cd  ~/.dotfiles/.config/nvim/ && nvim .'
 
 
 # System
@@ -92,6 +92,9 @@ alias yrw='yarn redwood'
 alias yrwg='yarn redwood generate'
 
 
+# For Copy
+alias cpsync='rsync -ah --progress'
+
 set PATH /home/anjan/.dotfiles/.config/hypr/scripts $PATH
 set PATH /home/anjan/.local/bin $PATH
 set PATH /home/anjan/.yarn/bin $PATH
@@ -116,6 +119,9 @@ end
 # bun
 set --export BUN_INSTALL "$HOME/.bun"
 set --export PATH $BUN_INSTALL/bin $PATH
+
+# Set the cursor to a block in insert mode
+set -U fish_cursor_insert block
 
 zoxide init fish | source
 alias cd='z'

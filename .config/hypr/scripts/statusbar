@@ -1,18 +1,20 @@
 #!/bin/bash
 
-CONFIG="$HOME/.config/hypr/waybar/config"
+CONFIG="$HOME/.config/hypr/waybar/config.jsonc"
 STYLE="$HOME/.config/hypr/waybar/style.css"
+MODULE="$HOME/.config/hypr/waybar/modules.jsonc"
 
 start_waybar() {
-	waybar --bar main-bar --log-level error --config ${CONFIG} --style ${STYLE}
+  waybar --bar main-bar --log-level error --config ${CONFIG} --style ${STYLE}
 }
+start_waybar
 
-CONFIG_FILES="$HOME/.config/hypr/waybar/config $HOME/.config/hypr/waybar/style.css"
+CONFIG_FILES="$CONFIG $STYLE $MODULE"
 
 trap "killall waybar" EXIT
 
 while true; do
-	start_waybar &
-	inotifywait -e create,modify $CONFIG_FILES
-	killall waybar
+  start_waybar &
+  inotifywait -e create,modify $CONFIG_FILES
+  killall waybar
 done

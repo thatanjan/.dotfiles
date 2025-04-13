@@ -1,5 +1,5 @@
 /* @import url('/home/anjan/.cache/wal/colors-waybar.css'); */
-@import url('/home/anjan/catppuccin/waybar/themes/macchiato.css');
+@import url('/home/anjan/catppuccin/waybar/themes/mocha.css');
 
 * {
   font-family: 'JetBrainsMono', 'Noto Sans', 'Roboto Condensed', sans-serif;
@@ -11,6 +11,10 @@ window#waybar {
   transition-property: background-color;
   transition-duration: 0.5s;
   color: @text;
+}
+
+#window {
+  padding: 0 40px;
 }
 
 window#waybar.test #workspaces {
@@ -121,8 +125,8 @@ window#waybar.hidden {
 }
 
 #custom-power {
-  margin-right: 4px;
-  font-size: 24px;
+  margin-right: 20px;
+  font-size: 20px;
 }
 
 #custom-updater {

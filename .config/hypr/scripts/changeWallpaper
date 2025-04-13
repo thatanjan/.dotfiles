@@ -11,7 +11,7 @@ set_wallpaper
 if [ -z "$1" ]; then
 	echo "Error: Please provide a URL as an argument."
 	echo "Using the current wallpaper"
-	wal -c && wal -i ~/Pictures/wallpaper
+	# wal -c && wal -i ~/Pictures/wallpaper
 	exit 1
 fi
 
