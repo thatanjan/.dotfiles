@@ -30,6 +30,10 @@ alias cdcc='cd ~/git_projects/cules-coding'
 alias ccv='cd ~/git_projects/cules-coding && v .'
 alias ccs='cd ~/git_projects/cules-coding && yarn dev'
 
+alias deshd='cd ~/git_projects/deshly/ && npm run dev'
+alias desh='cd ~/git_projects/deshly/'
+alias deshv='cd ~/git_projects/deshly/ && nvim .'
+
 # For git
 alias ga='git add'
 alias gs='git status'
