@@ -25,15 +25,15 @@
     "active-only": false,
     "sort-by-number": true,
     "format-icons": {
-      "1": "1",
-      "2": "2",
-      "3": "3",
-      "4": "4",
+      "1": "1  Neovim",
+      "2": "2  Design",
+      "3": "3  Preview",
+      "4": "4  Browser",
       "5": "5",
       "6": "6",
       "7": "7",
-      "8": "8",
-      "9": "9",
+      "8": "8  VScode",
+      "9": "9  Music",
       "10": "10",
       "focused": "",
       "default": ""
@@ -109,11 +109,11 @@
   },
   "disk": {
     "interval": 30,
-    "format": " {free}",
+    "format": "  {free}",
   },
   "memory": {
     "interval": 10,
-    "format": "  {used:0.1f}G",
+    "format": "󰍛 {used:0.1f}G",
   },
   "network": {
     "interval": 5,
@@ -135,7 +135,7 @@
     "exec-if": "ping wttr.in -c1",
   },
   "custom/updater": {
-    "format": "󰚰 {}",
+    "format": "󰚰  {}",
     "exec": "checkupdates | wc -l",
     "exec-if": "[[ $(checkupdates | wc -l) ]]",
     "interval": 10800,
@@ -166,7 +166,7 @@
     "on-click-right": "pavucontrol",
     "on-scroll-up": "~/.config/hypr/scripts/volume --inc",
     "on-scroll-down": "~/.config/hypr/scripts/volume --dec",
-    "on-click-middle": "pulseaudio-equalizer-gtk", 
+    "on-click-middle": "pulseaudio-equalizer-gtk",
     "smooth-scrolling-threshold": 1,
   },
   "custom/keybindings": {
