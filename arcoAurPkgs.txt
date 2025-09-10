@@ -11,3 +11,4 @@ rofi-bluetooth-git
 rofi-mixer-git
 rofi-vscode-mode
 waypaper
+rofi-greenclip

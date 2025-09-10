@@ -19,11 +19,8 @@ ripgrep
 ripgrep-all
 rofi
 rofi-emoji
-rofi-greenclip
 unrar
 unzip
-waybar-git
 yarn
 yay-bin
-youtube-dl
 zoxide
