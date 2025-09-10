@@ -1,103 +1,8 @@
-# Important
-alias cat=bat
+## Source from conf.d before our fish config
+source /usr/share/cachyos-fish-config/conf.d/done.fish
 
-alias wcv='cd ~/.dotfiles/.config/hypr/ && nvim waybar/config.jsonc'
-alias hcv='cd ~/.dotfiles/.config/hypr/ && nvim hyprland.conf'
-alias hc='cd ~/.dotfiles/.config/hypr/'
-
-alias red='redshift -l 23.810331:90.412521 -b'
-alias i3='nvim ~/.config/i3/config'
-alias ri3='bat ~/.config/i3/config'
-alias ali='nvim ~/.config/fish/config.fish'
-alias rali='nvim ~/.config/fish/config.fish'
-alias kitcon='nvim ~/.config/kitty/kitty.conf'
-
-alias nvimPer='cd ~/.dotfiles/.config/nvim/ && git checkout personal'
-
-alias cdpor='cd ~/git_projects/portfolio'
-alias pors='cd ~/git_projects/portfolio && yarn dev'
-alias porv='cd ~/git_projects/portfolio && nvim src'
-
-alias cdcfs='cd ~/git_projects/confession/server'
-alias cdcfc='cd ~/git_projects/confession/client'
-alias cf='cd ~/git_projects/confession/server && nvim src'
-alias cfs='cd ~/git_projects/confession/server && yarn dev'
-alias cfc='cd ~/git_projects/confession/client&& nvim .'
-alias cfcs='cd ~/git_projects/confession/client&& yarn dev'
-alias cfcbs='cd ~/git_projects/confession/server && yarn both-dev'
-
-alias cdcc='cd ~/git_projects/cules-coding'
-alias ccv='cd ~/git_projects/cules-coding && v .'
-alias ccs='cd ~/git_projects/cules-coding && yarn dev'
-
-alias deshd='cd ~/git_projects/deshly/ && npm run dev'
-alias desh='cd ~/git_projects/deshly/'
-alias deshv='cd ~/git_projects/deshly/ && nvim .'
-
-# For git
-alias ga='git add'
-alias gs='git status'
-alias gd='git diff'
-alias gcl='git clone'
-alias gba='git branch -a'
-alias gc='git checkout'
-alias gcb='git checkout -b'
-alias gr='git remote'
-alias grv='git remote -v'
-alias gra='git remote add'
-alias gp='git push origin'
-alias gpu='git pull origin'
-alias gcm="git commit -m"
-alias gcmv="git commit"
-alias gcam="git commit -am"
-alias gcamnd="git commit --amend -m"
-alias gstr="git restore"
-alias gstrs="git restore --staged"
-alias gl='git log'
-alias gm='git merge'
-alias gf='git fetch origin'
-
-# For configs
-alias v='nvim'
-alias nvcon='cd ~/.config/nvim/ && nvim init.lua'
-alias picoc='nvim ~/.config/picom/picom.conf'
-alias alac='nvim ~/.config/alacritty/alacritty.yml'
-alias liconv='v ~/.dotfiles'
-alias cdlico='cd ~/.dotfiles'
-alias qcon='nvim ~/.config/qtile/config.py'
-alias newv='cd  ~/.dotfiles/.config/nvim/ && nvim .'
-
-
-# System
-alias po='poweroff'
-alias rbt='reboot'
-
-# Pacman
-alias paci='sudo pacman -S'
-alias pacr='sudo pacman -Rns'
-alias pacu='sudo pacman -Syu'
-
-alias yad='yarn add --dev'
-alias ya='yarn add'
-
-
-alias arch='sudo mount /dev/sda12 /mnt/arch'
-alias uarch='sudo umount /mnt/arch'
-alias cdarch='cd /mnt/arch/home/anjan'
-
-alias arco='sudo mount /dev/sda13 /mnt/arco'
-alias uarco='sudo umount /mnt/arco'
-alias cdarco='cd /mnt/arco/home/anjan'
-
-alias pha='php artisan'
-
-## For Redwood
-alias yrw='yarn redwood'
-alias yrwg='yarn redwood generate'
-
-
-# For Copy
-alias cpsync='rsync -ah --progress'
+source /home/anjan/.dotfiles/.config/fish/conf.d/alias.fish
+source /home/anjan/.dotfiles/.config/fish/conf.d/functions.fish
 
 set PATH /home/anjan/.dotfiles/.config/hypr/scripts $PATH
 set PATH /home/anjan/.local/bin $PATH
@@ -123,6 +28,37 @@ end
 # bun
 set --export BUN_INSTALL "$HOME/.bun"
 set --export PATH $BUN_INSTALL/bin $PATH
+
+# Format man pages
+set -x MANROFFOPT "-c"
+set -x MANPAGER "sh -c 'col -bx | bat -l man -p'"
+
+
+# Set settings for https://github.com/franciscolourenco/done
+set -U __done_min_cmd_duration 10000
+set -U __done_notification_urgency_level low
+
+## Environment setup
+# Apply .profile: use this to put fish compatible .profile stuff in
+if test -f ~/.fish_profile
+  source ~/.fish_profile
+end
+
+# Add ~/.local/bin to PATH
+if test -d ~/.local/bin
+    if not contains -- ~/.local/bin $PATH
+        set -p PATH ~/.local/bin
+    end
+end
+
+# Add depot_tools to PATH
+if test -d ~/Applications/depot_tools
+    if not contains -- ~/Applications/depot_tools $PATH
+        set -p PATH ~/Applications/depot_tools
+    end
+end
+
+
 
 # Set the cursor to a block in insert mode
 set -U fish_cursor_insert block
