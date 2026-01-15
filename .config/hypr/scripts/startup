@@ -30,3 +30,6 @@ dex $HOME/.config/autostart/arcolinux-welcome-app.desktop &
 #discord &
 #nm-applet --indicator
 #variety &
+
+# Set kitty as default terminal for nemo
+gsettings set org.cinnamon.desktop.default-applications.terminal exec kitty
