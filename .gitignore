@@ -5,3 +5,6 @@ github-copilot/
 .config/fish/fish_variables
 __pycache__/
 .config/fish/conf.d/omf.fish
+.config/kitty/kitty.conf.bak
+.config/hypr/monitors.conf
+.config/hypr/workspaces.conf

@@ -105,7 +105,7 @@
   "custom/power": {
     "format": "⏻",
     "tooltip": false,
-    "on-click": "archlinux-logout",
+    "on-click": "wlogout",
   },
   "disk": {
     "interval": 30,
