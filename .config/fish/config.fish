@@ -15,9 +15,9 @@ set PATH /home/anjan/.dotfiles/my_scripts/ $PATH
 
 set -x QT_QPA_PLATFORMTHEME qt5ct
 
-set SUDO_EDITOR 'nvim'
-set GIT_EDITOR 'nvim'
-set EDITOR 'nvim'
+set SUDO_EDITOR nvim
+set GIT_EDITOR nvim
+set EDITOR nvim
 
 set -g fish_key_bindings fish_vi_key_bindings
 
@@ -30,9 +30,8 @@ set --export BUN_INSTALL "$HOME/.bun"
 set --export PATH $BUN_INSTALL/bin $PATH
 
 # Format man pages
-set -x MANROFFOPT "-c"
+set -x MANROFFOPT -c
 set -x MANPAGER "sh -c 'col -bx | bat -l man -p'"
-
 
 # Set settings for https://github.com/franciscolourenco/done
 set -U __done_min_cmd_duration 10000
@@ -41,7 +40,7 @@ set -U __done_notification_urgency_level low
 ## Environment setup
 # Apply .profile: use this to put fish compatible .profile stuff in
 if test -f ~/.fish_profile
-  source ~/.fish_profile
+    source ~/.fish_profile
 end
 
 # Add ~/.local/bin to PATH
@@ -58,10 +57,14 @@ if test -d ~/Applications/depot_tools
     end
 end
 
-
-
 # Set the cursor to a block in insert mode
 set -U fish_cursor_insert block
 
 zoxide init fish | source
 alias cd='z'
+
+# Set locale to English (US) with UTF-8 encoding
+set -x LANG en_US.UTF-8
+set -x LC_TIME en_US.UTF-8
+# You could also set LC_ALL to ensure all locale settings are English:
+# set -x LC_ALL en_US.UTF-8
