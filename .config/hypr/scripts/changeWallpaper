@@ -1,18 +1,19 @@
 #!/bin/bash
 
 set_wallpaper() {
-	echo 'changing'
-	swaybg -m fill -i ~/Pictures/wallpaper >/dev/null 2>&1 &
+  echo 'changing'
+  # swaybg -m fill -i ~/Pictures/wallpaper >/dev/null 2>&1 &
+  waypaper --backend swaybg --fill fill --wallpaper ~/Pictures/wallpaper >/dev/null 2>&1 &
 }
 
 set_wallpaper
 
 # Check if URL argument is provided
 if [ -z "$1" ]; then
-	echo "Error: Please provide a URL as an argument."
-	echo "Using the current wallpaper"
-	# wal -c && wal -i ~/Pictures/wallpaper
-	exit 1
+  echo "Error: Please provide a URL as an argument."
+  echo "Using the current wallpaper"
+  # wal -c && wal -i ~/Pictures/wallpaper
+  exit 1
 fi
 
 # Create pictures directory if it doesn't exist
@@ -23,14 +24,12 @@ curl -o ~/Pictures/wallpaper "$1"
 
 # Check if the download was successful
 if [ $? -eq 0 ]; then
-	echo "Image downloaded successfully and stored as ~/pictures/wallpaper"
+  echo "Image downloaded successfully and stored as ~/pictures/wallpaper"
 
-	# swaybg -m fill -i ${DIR}/${RANDOMPICS}
-	# swaybg -m fill -i ~/Pictures/wallpaper >/dev/null 2>&1 &
-	set_wallpaper
-	echo "Wallpaper is changed"
-	# wal -c && wal -i ~/Pictures/wallpaper
-	# notify-send "${RANDOMPICS}"
+  set_wallpaper
+  echo "Wallpaper is changed"
+  # wal -c && wal -i ~/Pictures/wallpaper
+  notify-send "Wallpaper is changed"
 else
-	echo "Error: Failed to download the image."
+  echo "Error: Failed to download the image."
 fi

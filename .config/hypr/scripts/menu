@@ -2,16 +2,29 @@
 
 case $1 in
 "--win")
-	rofi -show window
-	;;
+  # rofi -show window
+  python3 /home/anjan/git_projects/hypr-switch/main.py
+  ;;
 "--emoji")
-	rofi -show emoji
-	;;
-"--clip")
-	rofi -modi "clipboard:greenclip print" -show clipboard -run-command '{cmd}'
-	;;
-*)
-	rofi -show drun
-	;;
+  rofi -show emoji
+  ;;
 
+"--bluetooth")
+  rofi-bluetooth
+  ;;
+"--clip")
+  # rofi -modi "clipboard:greenclip print" -show clipboard -run-command '{cmd}'
+  # cliphist list | rofi -dmenu -display-columns 2 | cliphist decode | wl-copy
+  cliphist list | rofi -dmenu -display-columns 2 | cliphist decode | wl-copy
+  ;;
+
+"--project")
+  PROJECT_SCRIPT="$HOME/.config/hypr/scripts/projects"
+  bash $PROJECT_SCRIPT
+  ;;
+
+*)
+  rofi -show drun
+  ;;
+# && wtype -M ctrl -k v -m ctrl
 esac

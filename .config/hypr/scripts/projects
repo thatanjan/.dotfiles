@@ -1,0 +1,36 @@
+#!/bin/bash
+
+# Base directory where your projects are located
+PROJECTS_DIR="/home/anjan/git_projects"
+
+# 1. Get the list of directories (projects) under the base directory.
+#    - find: starts searching from PROJECTS_DIR
+#    - -mindepth 1: ignores the PROJECTS_DIR itself
+#    - -maxdepth 1: only lists direct subdirectories
+#    - -type d: only includes directories
+#    - -print0: prints results separated by null characters (safer for unusual filenames)
+#    - awk: takes the list and prints only the final directory name,
+#           and filters out any hidden directories (starting with '.')
+PROJECT_LIST=$(find "$PROJECTS_DIR" -mindepth 1 -maxdepth 1 -type d -print0 | \
+               xargs -0 -n 1 basename | \
+               grep -v '^\.')
+
+# 2. Use Rofi to let the user select a project.
+#    - -dmenu: Run Rofi in menu mode.
+#    - -p "Select Project:": Sets the prompt text.
+#    - -i: Case-insensitive searching.
+#    - -matching fuzzy: Use fuzzy matching for easier searching.
+#    - -format 's': Output the selected string.
+SELECTED_PROJECT=$(echo -e "$PROJECT_LIST" | rofi -dmenu -p "Select Project:" -i -matching fuzzy -format 's')
+
+# 3. Check if a project was selected (i.e., not empty or escape)
+if [ -n "$SELECTED_PROJECT" ]; then
+    # Construct the full path to the selected project directory
+    PROJECT_PATH="$PROJECTS_DIR/$SELECTED_PROJECT"
+
+    # 4. Open Neovide with the project path.
+    #    The 'exec' command replaces the current script process with the Neovide process.
+    #    '--' ensures that if the project name starts with '-', it's not treated as an option.
+    #    '&': Run Neovide in the background so the script/terminal (if run manually) doesn't hang.
+    neovide "$PROJECT_PATH" &
+fi
