@@ -68,3 +68,21 @@ matches:
 
   - trigger: ':email'
     replace: 'thatanjan@gmail.com'
+
+  - trigger: ':dhk'
+    replace: 'Dhaka, Bangladesh'
+
+  - trigger: ':name'
+    replace: 'Anjan Shomodder'
+
+  - trigger: ':portfolio'
+    replace: 'https://www.thatanjan.com'
+
+  - trigger: ':blog'
+    replace: 'https://blog.thatanjan.com/'
+
+  - trigger: ':tw'
+    replace: 'https://twitter.com/thatanjan'
+
+  - trigger: ':sig'
+    replace: "Best regards,\nAnjan Shomodder"
