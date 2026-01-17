@@ -8,3 +8,4 @@ __pycache__/
 .config/kitty/kitty.conf.bak
 .config/hypr/monitors.conf
 .config/hypr/workspaces.conf
+.config/hypr/laptop.conf
