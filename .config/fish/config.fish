@@ -1,5 +1,7 @@
 ## Source from conf.d before our fish config
-source /usr/share/cachyos-fish-config/conf.d/done.fish
+if test -f /usr/share/cachyos-fish-config/conf.d/done.fish
+  source /usr/share/cachyos-fish-config/conf.d/done.fish
+end
 
 source /home/anjan/.dotfiles/.config/fish/conf.d/alias.fish
 source /home/anjan/.dotfiles/.config/fish/conf.d/functions.fish
