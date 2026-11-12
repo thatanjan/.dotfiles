@@ -9,3 +9,11 @@ __pycache__/
 .config/hypr/monitors.conf
 .config/hypr/workspaces.conf
 .config/hypr/laptop.conf
+
+*.back
+
+*.env
+.env*
+
+# Fish themes
+.config/fish/themes/static/

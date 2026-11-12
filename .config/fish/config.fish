@@ -70,3 +70,27 @@ set -x LANG en_US.UTF-8
 set -x LC_TIME en_US.UTF-8
 # You could also set LC_ALL to ensure all locale settings are English:
 # set -x LC_ALL en_US.UTF-8
+
+
+
+# Load environment variables
+
+# Example snippet to source an env file
+if test -f ~/.config/fish/.env
+    for line in (cat ~/.config/fish/.env | grep -v '^#')
+        set item (string split -m 1 '=' $line)
+        set -gx $item[1] $item[2]
+    end
+end
+
+# Set up fzf key bindings
+fzf --fish | source
+
+function fdiff
+  set -l sel(git diff --name-only; git ls-files --others --exclude-standard)
+  echo "$sel"
+    set -l selection (git diff --name-only; git ls-files --others --exclude-standard $argv | fzf)
+    if test -n "$selection"
+        git diff $selection
+    end
+end
