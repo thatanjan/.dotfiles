@@ -1,0 +1,13 @@
+#!/usr/bin/bash
+
+SPEAKER_ID="AC:B1:EE:D6:7E:B5"
+
+toggle_bluetooth_speaker() {
+  if bluetoothctl info "$SPEAKER_ID" | grep -q "Connected: yes"; then
+    bluetoothctl disconnect "$SPEAKER_ID"
+  else
+    bluetoothctl connect "$SPEAKER_ID"
+  fi
+}
+
+toggle_bluetooth_speaker
