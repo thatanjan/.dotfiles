@@ -2,7 +2,7 @@
 alias cat=bat
 
 alias wcv='cd ~/.dotfiles/.config/hypr/ && nvim waybar/config.jsonc'
-alias hcv='cd ~/.dotfiles/.config/hypr/ && nvim hyprland.conf'
+alias hcv='cd ~/.dotfiles/.config/hypr/ && nvim hyprland.lua'
 alias hc='cd ~/.dotfiles/.config/hypr/'
 
 alias red='redshift -l 23.810331:90.412521 -b'
@@ -103,10 +103,10 @@ alias cpsync='rsync -ah --progress'
 
 
 # Replace ls with eza
-alias ls='eza -al --color=always --group-directories-first --icons' # preferred listing
-alias la='eza -a --color=always --group-directories-first --icons'  # all files and dirs
-alias ll='eza -l --color=always --group-directories-first --icons'  # long format
-alias lt='eza -aT --color=always --group-directories-first --icons' # tree listing
+alias ls='eza -Al --icons  --color=always --group-directories-first ' # preferred listing
+alias la='eza -a --icons--color=always --group-directories-first  '  # all files and dirs
+alias ll='eza -l --icons--color=always --group-directories-first  '  # long format
+alias lt='eza -aT --icons --color=always --group-directories-first ' # tree listing
 alias l.="eza -a | grep -e '^\.'"                                     # show only dotfiles
 
 
@@ -150,3 +150,9 @@ alias jctl="journalctl -p 3 -xb"
 
 # Recent installed packages
 alias rip="expac --timefmt='%Y-%m-%d %T' '%l\t%n %v' | sort | tail -200 | nl"
+
+# pi -> omp
+# alias pi='omp'
+alias ompc='omp --continue'
+alias ompr='omp --resume'
+
