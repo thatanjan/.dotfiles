@@ -1,0 +1,23 @@
+{
+  "servers": {
+    "figma-mcp-server": {
+      "type": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "figma-developer-mcp",
+        "--figma-api-key=${input:figma-access-token}",
+        "--stdio"
+      ],
+      "version": "0.0.1"
+    },
+  },
+  "inputs": [
+    {
+      "type": "promptString",
+      "id": "figma-access-token",
+      "description": "Figma token",
+      "password": true
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+	"[fish]": {
+		"editor.defaultFormatter": "bmalehorn.vscode-fish"
+	},
+	"[typescriptreact]": {
+		"editor.defaultFormatter": "biomejs.biome"
+	},
+	"editor.fontSize": 13,
+	"editor.fontFamily": "FiraCode Nerd Font Mono",
+	"editor.fontLigatures": true,
+	"terminal.integrated.fontLigatures.enabled": true,
+	"editor.lineHeight": 2.5,
+	"editor.lineNumbers": "relative",
+	"editor.letterSpacing": 0.5,
+	"terminal.integrated.fontSize": 18,
+	"github.copilot.enable": {
+		"*": true,
+		"plaintext": false,
+		"markdown": true,
+		"scminput": false
+	},
+	"[typescript]": {
+		"editor.defaultFormatter": "vscode.typescript-language-features"
+	},
+	"chat.viewSessions.orientation": "stacked",
+	"json.schemaDownload.trustedDomains": {
+		"https://biomejs.dev": true,
+		"https://developer.microsoft.com/json-schemas/": true,
+		"https://json-schema.org/": true,
+		"https://json.schemastore.org/": true,
+		"https://openapi.vercel.sh/vercel.json": true,
+		"https://raw.githubusercontent.com/can1357/oh-my-pi/main/packages/coding-agent/src/config/mcp-schema.json": true,
+		"https://raw.githubusercontent.com/devcontainers/spec/": true,
+		"https://raw.githubusercontent.com/microsoft/vscode/": true,
+		"https://schemastore.azurewebsites.net/": true,
+		"https://www.schemastore.org/": true
+	},
+	"git.blame.editorDecoration.enabled": true,
+	"biome.configurationPath": "",
+	"workbench.colorTheme": "Dark Modern",
+	"[jsonc]": {
+		"editor.defaultFormatter": "biomejs.biome"
+	},
+	"editor.formatOnSave": true,
+	"[html]": {
+		"editor.defaultFormatter": "biomejs.biome"
+	},
+	"[json]": {
+		"editor.defaultFormatter": "biomejs.biome"
+	},
+	"diffEditor.ignoreTrimWhitespace": false
+}
